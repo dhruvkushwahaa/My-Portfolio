@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Cart – ZENKO</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,700;1,800&family=Barlow:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap bar">
+    <a class="logo" href="index.html">ZENKO</a>
+    <nav aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="flavours.html">Flavours</a>
+      <a href="why.html">Why Zenko</a>
+      <a href="contact.html">Contact</a>
+      <a class="btn" href="cart.html" id="cartBtn">Cart (<span id="count">0</span>)</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="pagehead"><h1>Your cart</h1></div>
+  <section class="section cartbox">
+    <div id="list"></div>
+    <div class="total" id="totalRow"><span>Total</span><span id="total">₹0</span></div>
+    <form id="orderForm" novalidate>
+      <h2 class="sub">Delivery details</h2>
+      <label>Full name<input id="name" autocomplete="name"></label>
+      <label>Mobile number<input id="phone" inputmode="numeric" maxlength="10" autocomplete="tel"></label>
+      <label>Email (optional)<input id="email" type="email" autocomplete="email"></label>
+      <label>Delivery address<textarea id="addr" rows="3" autocomplete="street-address"></textarea></label>
+      <div class="err" id="err" role="alert"></div>
+      <button class="btn" type="submit" id="placeBtn">Place order</button>
+    </form>
+    <div class="done" id="done" hidden></div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Zenko Energy Drink. Sample page for a class project.</span>
+    <nav aria-label="Footer">
+      <a href="index.html">Home</a><a href="flavours.html">Flavours</a><a href="why.html">Why Zenko</a><a href="contact.html">Contact</a><a href="cart.html">Cart</a>
+    </nav>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

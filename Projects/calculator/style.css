@@ -1,0 +1,91 @@
+/* ---------- Page ---------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: #1d2433;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+/* ---------- Calculator body ---------- */
+.calculator {
+  width: min(340px, 92vw);
+  padding: 18px;
+  border-radius: 22px;
+  background: #2a3347;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45);
+}
+
+/* ---------- Display ---------- */
+.display {
+  min-height: 96px;
+  margin-bottom: 16px;
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: #111827;
+  color: #f3f4f6;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+}
+
+.expression {
+  min-height: 20px;
+  font-size: 0.95rem;
+  color: #8b95a9;
+  word-break: break-all;
+}
+
+.result {
+  font-size: 2.4rem;
+  font-weight: 600;
+  word-break: break-all;
+}
+
+/* Error messages (e.g. divide by zero) use a smaller red font */
+.result.error {
+  font-size: 1.3rem;
+  color: #f87171;
+}
+
+/* ---------- Button grid (4 columns) ---------- */
+.keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.key {
+  padding: 16px 0;
+  border: none;
+  border-radius: 12px;
+  background: #3b4660;
+  color: #f3f4f6;
+  font-size: 1.25rem;
+  font-family: inherit;
+  cursor: pointer;
+  transition: transform 0.08s ease, filter 0.15s ease;
+}
+
+.key:hover  { filter: brightness(1.15); }
+.key:active { transform: scale(0.95); }
+.key:focus-visible { outline: 3px solid #fbbf24; outline-offset: 2px; }
+
+.key.fn { background: #5b6788; }
+.key.op { background: #f59e0b; color: #1d2433; font-weight: 600; }
+.key.eq { background: #10b981; color: #052e22; font-weight: 700; }
+
+/* The 0 key spans two columns, like a real calculator */
+.key.zero { grid-column: span 2; }
+
+@media (prefers-reduced-motion: reduce) {
+  .key { transition: none; }
+}

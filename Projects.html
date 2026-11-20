@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects | Dhruv Kushwaha</title>
+  <meta name="description" content="Portfolio of Dhruv Kushwaha, BCA student and aspiring frontend developer.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <a href="index.html" class="logo">Dhruv<span>.dev</span></a>
+    <nav id="nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="about.html">About me</a>
+      <a href="skills.html">Skills</a>
+      <a href="projects.html" aria-current="page">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button id="themeBtn" class="icon-btn" aria-label="Switch to dark theme">Dark</button>
+      <button id="menuBtn" class="icon-btn menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="nav">Menu</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="projects" class="section">
+      <h2>Projects</h2>
+      <div class="projects">
+        <article class="project">
+          <h3>Zenko Energy Drink</h3>
+          <p>A responsive multi-page landing page for an energy drink brand, with separate pages and an order form that sends orders by email.</p>
+          <p class="tech">HTML, CSS, JavaScript</p>
+          <a href="projects/zenko/index.html" target="_blank" rel="noopener" class="btn btn-ghost">View project</a>
+        </article>
+
+        <article class="project">
+          <h3>Simple Calculator</h3>
+          <p>A calculator with a real-calculator button layout. It does basic arithmetic and handles invalid input, such as division by zero, without breaking.</p>
+          <p class="tech">HTML, CSS, JavaScript</p>
+          <a href="projects/calculator/index.html" target="_blank" rel="noopener" class="btn btn-ghost">View project</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Dhruv Kushwaha. Built with HTML, CSS and JavaScript.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
